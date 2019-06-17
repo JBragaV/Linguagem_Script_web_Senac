@@ -1,0 +1,53 @@
+<script>
+    var alunos = [
+        "Mental Doidão", "Retardado", "Sandra", "Ligeirinho", "EU", "Não sabe Ironia", "Iego", "Giullyan", "Yuri", "Marllon", "Jordan", "Matheus"
+        ];
+        var numero = (Math.random()*10).toFixed(0);
+        console.log(alunos[numero]);
+
+        alunos.push("Irmão do reta");
+        alunos.push("Sanderson");
+
+        /*for(var i = 0; i < alunos.length; i++){
+            console.log(alunos[i]+"\n");
+        }*/
+        alunos.unshift("Luiz");
+        
+        console.log('-------------------------------------------');
+
+        /*for(var i = 0; i < alunos.length; i++){
+            console.log(alunos[i]+"\n");
+        }*/
+
+        
+        alunos.pop();
+        alunos.shift();
+
+        console.log('---------------------------------------------');
+
+        /*for(var i = 0; i < alunos.length; i++){
+            console.log(alunos[i]+"\n");
+        }*/
+        console.log('-------------------------------------------');
+        alunos.splice(3, 0, "FireFox");
+        /*for(var i = 0; i < alunos.length; i++){
+            console.log(alunos[i]+"\n");
+        }*/
+
+        var posicao = alunos.indexOf("FireFox");
+
+        alunos.splice(posicao, 1);
+        alunos.sort();
+        /*for(var i = 0; i < alunos.length; i++){
+            console.log(alunos[i]+"\n");
+        }*/
+
+        alunos.reverse();
+        alunos.splice(2, 1, "Amanda");
+        for(var i = 0; i < alunos.length; i++){
+            console.log(alunos[i]+"\n");
+        } 
+
+
+
+</script>

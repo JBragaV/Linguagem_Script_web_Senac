@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js"></script>
+</head>
+<body>
+    <p id = "media"></p>
+</body>
+</html>
+
+<script>
+   var n1 = 8;
+   var n2 = 4;
+   var so = n1 + n2;
+   var su = n1 - n2;
+   var mu = n1 * n2;
+   var di = n1 / n2;
+
+   var media = n1+" + "+n2+" = "+so+".<p></p>"+n1+" - "+n2+" = "+su+".<p></p> "+n1+" X "+n2+" = "+mu+".<p></p> "+n1+" / "+n2+" = "+di+"."
+
+    document.getElementById("media").innerHTML = media;
+
+</script>

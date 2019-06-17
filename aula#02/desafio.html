@@ -1,0 +1,23 @@
+<img src="_img/lampada-apagada.jpg" id='lamp'/>
+
+<script>
+
+    var lampada = document.getElementById("lamp")
+
+    lampada.addEventListener("click", function () {
+        lampada.src = "_img/lampada-quebrada.jpg";
+    });
+
+    lampada.addEventListener("mouseenter", function () {
+        lampada.src = "_img/lampada-acesa.jpg";
+    });
+
+    lampada.addEventListener("mouseleave", function () {
+        lampada.src = "_img/lampada-apagada.jpg";
+    });
+
+    lampada.addEventListener("dblclick", function(){
+        lampada.src = "_img/poste.jpg";
+    });
+
+</script>

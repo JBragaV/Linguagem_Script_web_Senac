@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js"></script>
+</head>
+<body>
+        <form action="#">
+                <label for="idn1">Digite um número:</label>
+                <input id="idn1"><p></p>
+                <label for="idn2">Número Absoluto:</label>
+                <input id="idn2"><p></p>
+                <p></p>
+                <input type="button" onclick="operacoes()" value="Enviar">
+            </form>
+ <p id="resto"></p>
+</body>
+</html>
+
+<script>
+    function operacoes(){
+        var n1 = parseFloat(document.getElementById("idn1").value);    
+        var resultado = Math.abs(n1);                    
+        document.getElementById("idn2").value = resultado;
+    }
+</script>

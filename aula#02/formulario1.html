@@ -1,0 +1,46 @@
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<fieldset class="col-6 offset-3">
+    <legend>Dados Funcionário</legend>
+    <form>
+        <div class="form-group">
+            <label for="idnome">Nome</label>
+            <input class="form-control" type="text" name="nome" id="idnome">
+        </div>
+        <div class="form-group">
+            <label for="idemail">Email</label>
+            <input class="form-control" type="email" name="email" id="idemail">
+        </div>
+        <div class="form-group">
+            <label for="idtelefone">Telefone</label>
+            <input class="form-control" type="tel" name="telefone" id="idtelefone">
+        </div>
+        <div class="form-group">
+            <label for="idsalario">Salário</label>
+            <input class="form-control" type="text" name="salario" id="idsalario">
+        </div>
+        <div>
+            <button class="btn btn-dark">Enviar</button>
+        </div>
+    </form>
+</fieldset>
+<script>
+    // seleciona o primeiro emento de um conjunto
+    var btn = document.querySelector('button');
+    // formatar o valor no input salario para estrutura em moeda corrente
+    btn.onclick = () => {
+        let salario = document.getElementsByName("salario")[0].value;
+        let sal = salario.replace(",", ".");
+        const formatado = parseFloat(sal).toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'});
+        /* ** desafio ** 
+            ao clicar no botão o formulario é totalmente 'zerado' e
+            o valor formatado não aparece no campo. Seu desafio é utilizando
+            o que já foi aprendido em aula e algumas pesquisas, fazer com que
+            o campo salário exiba o valor formatado.
+        */
+        alert(formatado);
+        retorno = formatado;
+
+        
+            
+    };
+</script>

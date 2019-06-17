@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js"></script>
+</head>
+<body>
+ <p id="resto"></p>
+</body>
+</html>
+
+<script>
+   
+   var num1 = 21;
+   var num2 = 30;
+   var resultado = "";
+    if(num1 > num2 || num1 == num2){
+        resultado = "A soma de "+num1+" e "+num2+" é "+(num1+num2)+"."; 
+    }else{
+        resultado = "O produto de "+num1+" e "+num2+" é "+num1*num2+".";
+    }
+   document.getElementById("resto").innerHTML = resultado;
+   
+</script>

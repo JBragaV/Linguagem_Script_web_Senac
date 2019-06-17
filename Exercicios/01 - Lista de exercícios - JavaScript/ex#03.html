@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js"></script>
+</head>
+<body>
+    <p id = "valorConta"></p>
+</body>
+</html>
+
+<script>
+    var assinatura = 32.00;
+    var impulsos = 0.09;
+    var cel = 0.35;
+    var impMin = 90;
+    var impTotal = 254;
+    var impCel = 23;
+
+    var conta = ((impTotal - impMin - impCel) * 0.09 + (23 * 0.23) + 32).toLocaleString('pt-BR', {style: "currency", currency: "BRl"}); 
+
+    document.getElementById("valorConta").innerHTML = "O valor final da sua conta é " + conta;
+</script>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js"></script>
+</head>
+<body>
+    <form action="#">
+        <label for="real">Valor em Real: R$</label>
+        <input id="real">
+        <p></p>
+        <label for="porcentagem">Porcentagem: </label>
+        <input id="porcentagem">%<p></p>
+        <label for="resultado">Valor calculado:</label>
+        <input id="resultado">
+        <p></p>
+        <input type="button" onclick="operacoes()" value="Enviar">
+    </form>
+</body>
+</html>
+<script>
+    function operacoes() {
+        var real = parseFloat(document.getElementById("real").value);
+        var porcentagem = parseFloat(document.getElementById("porcentagem").value) / 100;
+        const retorno = (real - (real * porcentagem)).toLocaleString("pt-BR", {style: "currency", currency: "BRL"});
+        document.getElementById("resultado").value = retorno;
+    }
+</script>

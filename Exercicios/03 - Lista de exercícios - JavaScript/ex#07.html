@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+        <h1>Exercicio 07</h1>
+        <h2>Veja no consoloe o resultado.</h2>
+</body>
+</html>
+
+<script>
+    var num = 113;
+    var cont = 0;
+    for(var i = 0; i < num; i++){
+        if(num % (i + 1) == 0){
+            cont += 1;
+        }
+    }
+    if(cont == 2){
+        console.log("O número "+num+" é primo!!!");
+    }else{
+        console.log("O número "+num+" não é primo!!!");
+    }
+</script>

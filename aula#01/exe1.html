@@ -1,0 +1,44 @@
+<img src="_img/lampada-apagada.jpg" id='lamp'/>
+<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+<script>
+
+
+    $(function(){
+        $('#lamp').on({
+            click: () => {$('#lamp').attr('src', "_img/lampada-quebrada.jpg")},
+            mouseenter: () => {$('#lamp').attr('src', "_img/lampada-acesa.jpg")},
+            mouseleave: () => {$('#lamp').attr('src', "_img/lampada-apagada.jpg")}
+        })
+    })
+        
+    
+   
+
+
+
+        /*var lampada = document.getElementById("lamp");
+        
+        function quebra(){
+            //alert('está funcionando;');
+            lampada.src = "_img/lampada-quebrada.jpg"
+        }
+    
+        function acender(){
+            lampada.src = "_img/lampada-acesa.jpg"
+        }
+        function apagar(){
+            
+            lampada.src = "_img/lampada-apagada.jpg"
+        $(function(){
+    $('#senha').val('Consegui fazer essa porra.');
+    $('#check').click(function(){
+        if($('#senha').attr("type") == "password"){
+            $('#senha').attr("type", "text");
+        }else{
+            $('#senha').attr("type", "password");
+        }
+    });  
+
+        }*/
+
+</script>

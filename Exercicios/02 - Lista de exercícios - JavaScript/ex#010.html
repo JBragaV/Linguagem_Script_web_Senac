@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js"></script>
+</head>
+<body>
+        <fieldset class="col-6 offset-3">
+                <legend>Dados Funcionário</legend>
+                <form action="#">
+                    <div class="form-group">
+                        <label for="idsalario">Salario</label>
+                        <input class="form-control" type="text" name="salario" id="idsalario">
+                    <div class="form-group">
+                        <label for="idemprestimo">Emprestimo</label>
+                        <input class="form-control" type="text" name="emprestimo" id="idemprestimo">
+                    </div>
+                    <div class="form-group">
+                            <label for="idtempo">Tempo de pagamento:</label>
+                            <input class="form-control" type="text" name="tempo" id="idtempo" placeholder="Meses">
+                        </div>
+                    <div>
+                        <input class="btn btn-dark" type="button" value="Calcular">
+                    </div>
+                    <div class="form-group">
+                        <label for="idsituacao">Situação:</label>
+                        <input class="form-control" type="text" name="situacao" id="idsituacao">
+                    </div>
+                    <div class="form-group">
+                        <label for="idparcela">Parcelas:</label>
+                        <input class="form-control" type="text" name="parcela" id="idparcela">
+                    </div>
+                </form>
+            </fieldset>  
+ <p id="resto"></p>
+</body>
+</html>
+
+<script>
+   
+   document.getElementById("idtempo").onblur = () => {
+
+        var salario = parseFloat(document.getElementById('idsalario').value);
+        var emprestimo = parseFloat(document.getElementById('idemprestimo').value);
+        var tempo = parseFloat(document.getElementById('idtempo').value);
+        var prestação = emprestimo/tempo;
+        //const formatado = parseFloat(prestação.value.replace(",", ".")).toLocaleString('pt-BR', {style: "currency", currency: "BRl"});
+
+        var resultado = "";
+            if(prestação > (0.2*salario)){
+                resultado = "Emprestimo negado";
+            }else if(prestação == (0.2*salario)){
+                resultado = "Emprestimo em analize";
+            }else{
+                resultado = "Emprestimo concedido";
+            }
+        document.getElementById("idsituacao").value = resultado;
+        document.getElementById("idparcela").value = prestação;
+
+        
+
+   };
+</script>

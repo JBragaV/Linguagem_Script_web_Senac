@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+        <h1>Exercicio 14</h1>
+        <h2>Veja no consoloe o resultado.</h2>
+</body>
+</html>
+
+<script>
+    var perfeito = [];
+    var num = 500;
+    for(var i = 1; i <= num; i++){
+        var soma = 0;
+        var divisores = [];
+        for(var j = 1; j < i; j++){
+            if((i % j) == 0){
+                divisores.push(j);
+            }
+        }
+        for(var x = 0; x < divisores.length; x++){
+            soma += divisores[x];
+        }
+        if(soma == i){
+            perfeito.push(i);
+        }
+    }
+    console.log(perfeito);
+</script>

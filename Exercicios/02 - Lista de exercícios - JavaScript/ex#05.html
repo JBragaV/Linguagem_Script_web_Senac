@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js"></script>
+</head>
+<body>
+ <p id="resto"></p>
+</body>
+</html>
+
+<script>
+   
+   var num = 21;
+   var resultado = "O número "+num+" não está no intervalo de 5 a 20.";
+   for(var i = 5; i <= 20; i++){
+       if(num == i){
+           resultado = "O número "+num+" está no intervalo de 5 a 20.";
+           break;
+       }
+
+   }
+   document.getElementById("resto").innerHTML = resultado;
+   
+</script>

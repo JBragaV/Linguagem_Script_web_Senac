@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js"></script>
+</head>
+<body>
+    <form action="#">
+        <label for="precoHora">Preço da hora: R$</label>
+        <input id="precoHora"><p></p>
+        <label for="horasTrabalhadas">Horas Tabalhadas: </label>
+        <input id="horasTrabalhadas"><p></p>
+        <label for="inss">INSS: R$</label>
+        <input id="inss"><p></p>
+        <label for="liquido">Salário Líquido:</label>
+        <input id="liquido">
+        <p></p>
+        <input type="button" onclick="operacoes()" value="Enviar">
+    </form>
+</body>
+</html>
+<script>
+    function operacoes() {
+        var precoHora = parseFloat(document.getElementById("precoHora").value);
+        var horasTrabalhadas = parseFloat(document.getElementById("horasTrabalhadas").value);
+        var inss = parseFloat(document.getElementById("inss").value);
+        const retorno = ((precoHora*horasTrabalhadas)-inss).toLocaleString("pt-BR", {style: "currency", currency: "BRL"});
+        document.getElementById("liquido").value = retorno;
+    }
+</script>

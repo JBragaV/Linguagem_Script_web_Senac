@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js"></script>
+</head>
+<body>
+ <p id="resto"></p>
+</body>
+</html>
+
+<script>
+   
+   var ano = 1000;
+   var resultado = "";
+    if(ano%4 == 0 & ano%100 != 0){
+        resultado = "O ano de "+ano+" é Bissento."; 
+    }else if(ano%400 == 0){
+        resultado = resultado = "O ano de "+ano+" é Bissento.";
+    }else{
+        resultado = "O ano de "+ano+" NÃO é Bissento.";
+    }
+   document.getElementById("resto").innerHTML = resultado;
+   
+</script>

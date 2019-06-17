@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js"></script>
+</head>
+<body>
+        <form action="#">
+                <label for="idn1">Digite um número:</label>
+                <textarea name="message" id="resultado" rows="10" cols="30">       
+                </textarea>
+                <p></p>
+                <input type="button" onclick="operacoes()" value="Enviar">
+            </form>
+ <p id="resto"></p>
+</body>
+</html>
+
+<script>
+    function operacoes(){
+        var n1 = ((Math.random()*10)+1).toFixed(0);
+        var n2 = ((Math.random()*10)+1).toFixed(0);
+        var n3 = ((Math.random()*10)+1).toFixed(0);
+        alert("O primeiro número gerado foi "+n1);
+        alert("O segundo número gerado foi "+n2);
+        alert("O terceiro número gerado foi "+n3);
+        var max = Math.max(n1, n2, n3);
+        var min = Math.min(n1, n2, n3);
+        var meio = 0;   
+        if(n1 != min && n1 != max){
+                meio = n1;
+        }else if(n2 != min && n2 != max){
+            meio = n2;
+        }else{
+            meio = n3;
+        }
+                      
+        document.getElementById("resultado").value = "A ordem dos números é "+max+", "+meio+", "+min+".";
+    }
+</script>

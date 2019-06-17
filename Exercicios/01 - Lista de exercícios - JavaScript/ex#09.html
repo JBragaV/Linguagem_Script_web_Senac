@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js"></script>
+</head>
+<body>
+    <form action="#">
+        <label for="media">Primeiro número:</label>
+        <input id = "media"><p></p>
+        <label for="media1">Segundo número:</label>
+        <input id = "media1"></p>
+        <label for="div">Divisão:</label>
+        <input id = "div1"><p></p>
+        <label for="quadrado">primeiro²:</label>
+        <input id = "quadrado1"></p>
+        <label for="cubo">segundo³</label>
+        <input id = "cubo1"><p></p>
+        <input type="button" onclick="operacoes()" value="Enviar">
+    </form>
+</body>
+</html>
+
+<script>
+   
+   function operacoes(){
+        var n1 = parseInt(document.getElementById("media").value);
+        var n2 = parseInt(document.getElementById("media1").value);
+        var di = n1 / n2;
+        var qu = Math.pow(n1, 2);
+        var cb = Math.pow(n2, 3);
+        document.getElementById("div1").value = di;
+        document.getElementById("quadrado1").value = qu;
+        document.getElementById("cubo1").value = cb;
+   }
+</script>

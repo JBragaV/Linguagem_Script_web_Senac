@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+        <h1>Exercicio 12</h1>
+        <h2>Veja no consoloe o resultado.</h2>
+</body>
+</html>
+
+<script>
+    var n1 = 100;
+    var tempo = 0;
+    var taxa = 0.05;
+    var montante = 0;
+    do{
+        montante = n1 + (n1 * taxa * tempo);
+        console.log(montante)
+        tempo += 1;
+    }while(montante < 200)
+
+    console.log("O tempo necessário para chegar aos R$200,00 é de "+tempo+".")
+</script>
