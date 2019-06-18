@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+        <h1>Exercicio 17</h1>
+        <h2>Veja no consoloe o resultado.</h2>
+        
+        
+
+</body>
+</html>
+<script>
+
+    var frase = "O Flamengo é o maior campeão do RJ... Pode chorar";
+    var RegEx = /[^AEIOUáàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ]/gi;
+    var vogais = frase.replace(RegEx, "");
+    console.log("O total de vogais da frase `"+frase+"` é(são) "+vogais.length+".");
+    
+</script>
