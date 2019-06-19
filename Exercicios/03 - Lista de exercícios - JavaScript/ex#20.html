@@ -15,17 +15,17 @@
 </body>
 </html>
 <script>
-    var vetorA = [99, 100, 150, 200, 201];
-
-    
-
-
-    for(var i = 0; i < vetorA.length; i++){
-        for(var j = 0; j < vetorA.length; j++){
-            console.log(i+", "+j)
+    var vetorA = [201, 200, 150, 100, 99];
+    var cont = 0;
+    do{
+        for(var i = 0; i < vetorA.length; i++){
+            for(var j = 1; j < vetorA.length; j++){
+                if(vetorA[i] > vetorA[j]){
+                    console.log("i: "+vetorA[i]);
+                    console.log("j: "+vetorA[j]);
+                }
+            }
         }
-        
-
-    }
-
+        cont += 1;
+    }while(cont <= 5)
 </script>
