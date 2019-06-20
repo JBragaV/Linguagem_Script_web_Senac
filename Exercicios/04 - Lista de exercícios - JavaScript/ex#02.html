@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <script
+    src="https://code.jquery.com/jquery-3.4.1.slim.js"
+    integrity="sha256-BTlTdQO9/fascB1drekrDVkaKd9PkwBymMlHOiG+qLI="
+    crossorigin="anonymous"></script>
+  
+</head>
+<body>
+        <h1>Exercicio 02</h1>
+        <h2>Olhar o consoloe pra ver a resposta</h2>
+</body>
+</html>
+<script>
+   $(function(){
+       let idade = 13;
+       if(idade >= 5 && idade <= 7){
+           console.log("Nadador infantil A");
+       }else if(idade <= 10){
+           console.log("Nadador infantil B");
+       }else if(idade <= 13){
+           console.log("Nadador juvenil A");
+       }else if(idade <= 17){
+           console.log("Nadador juvenil B");
+       }else if(idade > 17){
+           console.log("Nadador Senior");
+       }else{
+           console.log("Nadador fora da idade de competição!!!")
+       }
+   })
+</script>

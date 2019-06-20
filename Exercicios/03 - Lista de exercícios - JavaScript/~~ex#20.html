@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+        <h1>Exercicio 20</h1>
+        <h2>Veja no consoloe o resultado.</h2>
+        
+
+</body>
+</html>
+<script>
+    var vetorA = [99, 100, 150, 200, 201];
+    
+    for(var i = 0; i < vetorA.length; i++){
+        var n1 = vetorA[i];
+        for(var j = 1; j <= vetorA.length; j++){
+            if( n1 > vetorA[j]){
+                console.log("Ih doido.... deu merda.")
+                console.log("i="+i+", j="+j);
+                console.log(n1+">"+vetorA[j]);
+            }
+            /*var n1, n2, n3;
+            n1 = vetorA[i];
+            n2 = vetorA[j];
+            console.log(n1);
+            console.log(n2);
+            /*n3 = n1;
+            n1 = n2;
+            n2 = n3;
+            console.log(n1);
+            console.log(n2);
+            /*vetorA.push(n1, i);
+            vetorA.push(n2, j);*/
+        }
+    } 
+    console.log(vetorA);
+</script>

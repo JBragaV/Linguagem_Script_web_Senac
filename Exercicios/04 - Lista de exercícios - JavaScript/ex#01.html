@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <script
+    src="https://code.jquery.com/jquery-3.4.1.slim.js"
+    integrity="sha256-BTlTdQO9/fascB1drekrDVkaKd9PkwBymMlHOiG+qLI="
+    crossorigin="anonymous"></script>
+  
+</head>
+<body>
+        <h1>Exercicio 01</h1>
+        <h2>Olhar o consoloe pra ver a resposta</h2>
+</body>
+</html>
+<script>
+   $(function(){
+       let sexo, pi, h;
+       sexo = "homem";
+       h = 1.76;
+       if(sexo == "homem"){
+           pi = (72.7 * h) - 58;
+       }else{
+           pi = (62.1 * h) - 44.7;
+       }
+       console.log("O peso ideal é "+pi.toFixed(2)+"Kg.")
+   })
+
+   
+</script>
