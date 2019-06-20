@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+        <h1>Exercicio 23</h1>
+        <h2>Veja no consoloe o resultado.</h2>
+        
+
+</body>
+</html>
+<script>
+    var vetorA = [];
+    for(var i = 0; i < 10; i++){
+        vetorA.push(Math.floor(Math.random()*1000 + 1));
+    }
+    for(var i = 0; i < vetorA.length; i++){
+        var par = 0;
+        console.log(i);
+        if(vetorA[i] % 2 != 0){
+            console.log("Elemento ímpar encontrano!!!!");
+            par = 1;
+            break;
+        }
+    }
+    if(par == 0){
+        console.log("Somente elementos pares nesse vetor!!!");
+    }
+    console.log(vetorA);
+</script>

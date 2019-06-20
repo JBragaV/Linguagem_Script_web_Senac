@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+        <h1>Exercicio 22</h1>
+        <h2>Veja no consoloe o resultado.</h2>
+        
+
+</body>
+</html>
+<script>
+    var vetorA = [];
+    for(var i = 0; i < 10; i++){
+        vetorA.push(Math.floor(Math.random()*10 + 1));
+    }
+    var n = 5;
+    //console.log(vetorA.indexOf(n));
+    if(vetorA.indexOf(n) >= 0){
+        console.log("O número "+n+" está na presente no vetor e é o "+(vetorA.indexOf(n)+1)+"° elemento.");
+    }
+    else{
+        console.log("O número "+n+" não foi encontrado nesse vetor!!!");
+    }
+    console.log(vetorA);
+</script>
