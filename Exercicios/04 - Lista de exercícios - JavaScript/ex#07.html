@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.js"  integrity="sha256-BTlTdQO9/fascB1drekrDVkaKd9PkwBymMlHOiG+qLI=" crossorigin="anonymous"></script>
+  
+</head>
+<body>
+        <h1>Exercicio 07</h1>
+        <label for="idAltura">Altura (metros):
+        <input name="nota1" id="idAltura"><p></p>
+        <label for="idPeso">Peso (kg):
+        <input name="nota2" id="idPeso"><p></p>
+        <input type="submit" id="idsubmit" value="Calcular"><input type='Reset' value="Limpar"><p></p>
+        <label for="idResultado">Resultado:
+        <input type ="hidden" id="idResultado"><p></p>
+        <label for="idResultado">IMC:
+        <input type ="hidden" id="idPontuacao">
+</body>
+</html>
+<script>
+   $(function(){
+       let altura, peso, imc, resultado;
+       $("#idAltura").blur(function(){
+            altura = parseFloat($("#idAltura").val());
+       })
+       $("#idPeso").blur(function(){
+            peso = parseInt($("#idPeso").val());
+       })
+       $("#idsubmit").click(function(){
+           imc = (peso / Math.pow(altura, 2)).toFixed(2);
+            if(imc < 20){
+                resultado = "Abaixo do peso!";
+            }else if(imc < 25){
+                resultado = "Peso normal";
+            }else if(imc < 30){
+                resultado = "Acima do peso";
+            }else if(imc < 34){
+                resultado = "Obeso";
+            }else{
+                resultado = "Muito obeso, sua bola";
+            }
+            $("#idResultado").attr('type', 'text');
+            $("#idResultado").val(resultado);
+            $("#idPontuacao").attr('type', 'text');
+            $("#idPontuacao").val(imc);
+       })
+   })
+</script>

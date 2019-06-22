@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script
+    src="https://code.jquery.com/jquery-3.4.1.slim.js"  integrity="sha256-BTlTdQO9/fascB1drekrDVkaKd9PkwBymMlHOiG+qLI=" crossorigin="anonymous"></script>
+  
+</head>
+<body>
+        <h1>Exercicio 06</h1>
+        <label for="Idnota1">Nota de Exatas:
+        <input name="nota1" id="idExata"><p></p>
+        <label for="Idnota2">Nota de Humanas:
+        <input name="nota2" id="idHumana"><p></p>
+        <label for="Idnota3">Nota de Conhecuimento geral:
+        <input name="nota3" id="idConhecimentoGeral"><p></p>
+        <input type="submit" id="idsubmit" value="Calcular"><input type='Reset' value="Limpar"><p></p>
+        <label for="idResultado">Resultado:
+        <input type ="hidden" id="idResultado"><p></p>
+        <label for="idResultado">Pontuação:
+        <input type ="hidden" id="idPontuacao">
+</body>
+</html>
+<script>
+   $(function(){
+       let exata, humanas, geral, total, resultado;
+       $("#idExata").blur(function(){
+            exata = parseFloat($("#idExata").val());
+       })
+       $("#idHumana").blur(function(){
+            humanas = parseFloat($("#idHumana").val());
+       })
+       $("#idConhecimentoGeral").blur(function(){
+            geral = parseFloat($("#idConhecimentoGeral").val());
+       })
+       $("#idsubmit").click(function(){
+           total = ((exata * 3) + (humanas * 2) + geral)/6;
+            //alert(total.toFixed(2));
+            if(total <= 250){
+                resultado = "Péssimo";
+            }else if(total <= 500){
+                resultado = "Ruim";
+            }else if(total <= 700){
+                resultado = "Regular";
+            }else if(total <= 900){
+                resultado = "Bom";
+            }else{
+                resultado = "Excelente";
+            }
+            $("#idResultado").attr('type', 'text');
+            $("#idResultado").val(resultado);
+            $("#idPontuacao").attr('type', 'text');
+            $("#idPontuacao").val(total.toFixed(2));
+       })
+   })
+</script>
