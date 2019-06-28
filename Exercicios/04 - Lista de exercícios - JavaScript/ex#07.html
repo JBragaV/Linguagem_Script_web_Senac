@@ -23,9 +23,9 @@
 </html>
 <script>
    $(function(){
-       let altura, peso, imc, resultado;
+       let altura, peso, imc, resultado, teste, str;
        $("#idAltura").blur(function(){
-            altura = parseFloat($("#idAltura").val());
+            altura = parseFloat($("#idAltura").val().replace(",", ".")); 
        })
        $("#idPeso").blur(function(){
             peso = parseInt($("#idPeso").val());
@@ -44,9 +44,14 @@
                 resultado = "Muito obeso, sua bola";
             }
             $("#idResultado").attr('type', 'text');
-            $("#idResultado").val(resultado);
+            //$("#idResultado").val(resultado);
             $("#idPontuacao").attr('type', 'text');
-            $("#idPontuacao").val(imc);
+            //$("#idPontuacao").val(imc.replace(".", ","));
+            
+            str = "quantas";
+            teste = str[1];
+            /*teste = "quantas".length;*/
+            $("#idAltura").val(teste);
        })
    })
 </script>
